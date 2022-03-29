@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>Move Knight</title>
+<meta name="" content="">
+<style>
+  .chessboard {
+    width: 98%;
+    height: 96%;    
+    border: 15px solid #333;
+}
+    .white {
+    float: left;
+    width: 12%;
+    height: 12%;
+    background-color: #fff;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    border: 1px solid black;
+}
+.white:hover{
+background-color:black;
+color:white;
+}
+    </style>
+</head>
+<body>
+	<div class="chessboard">
+        <div class="white" id="00" onclick="calculateMoves('0','0')">1</div>
+        <div class="white" id="01" onclick="calculateMoves('0','1')">2</div>
+        <div class="white" id="02" onclick="calculateMoves('0','2')">3</div>  
+        <div class="white" id="03" onclick="calculateMoves('0','3')">4</div>
+        <div class="white" id="04" onclick="calculateMoves('0','4')">5</div>
+        <div class="white" id="05" onclick="calculateMoves('0','5')">6</div>  
+        <div class="white" id="06" onclick="calculateMoves('0','6')">7</div>
+        <div class="white" id="07" onclick="calculateMoves('0','7')">8</div>
+        <div class="white" id="10" onclick="calculateMoves('1','0')">9</div>  
+        <div class="white" id="11" onclick="calculateMoves('1','1')">10</div>
+        <div class="white" id="12" onclick="calculateMoves('1','2')">11</div>
+        <div class="white" id="13" onclick="calculateMoves('1','3')">12</div>  
+        <div class="white" id="14" onclick="calculateMoves('1','4')">13</div>
+        <div class="white" id="15" onclick="calculateMoves('1','5')">14</div>
+        <div class="white" id="16" onclick="calculateMoves('1','6')">15</div>  
+        <div class="white" id="17" onclick="calculateMoves('1','7')">16</div>
+        <div class="white" id="20" onclick="calculateMoves('2','0')">17</div>
+        <div class="white" id="21" onclick="calculateMoves('2','1')">18</div> 
+        <div class="white" id="22" onclick="calculateMoves('2','2')">19</div>
+        <div class="white" id="23" onclick="calculateMoves('2','3')">20</div>
+        <div class="white" id="24" onclick="calculateMoves('2','4')">21</div>  
+        <div class="white" id="25" onclick="calculateMoves('2','5')">22</div>
+        <div class="white" id="26" onclick="calculateMoves('2','6')">23</div>
+        <div class="white" id="27" onclick="calculateMoves('2','7')">24</div>  
+        <div class="white" id="30" onclick="calculateMoves('3','0')">25</div>
+        <div class="white" id="31" onclick="calculateMoves('3','1')">26</div>
+        <div class="white" id="32" onclick="calculateMoves('3','2')">27</div> 
+        <div class="white" id="33" onclick="calculateMoves('3','3')">28</div>
+        <div class="white" id="34" onclick="calculateMoves('3','4')">29</div>
+        <div class="white" id="35" onclick="calculateMoves('3','5')">30</div>  
+        <div class="white" id="36" onclick="calculateMoves('3','6')">31</div>
+        <div class="white" id="37" onclick="calculateMoves('3','7')">32</div>
+        <div class="white" id="40" onclick="calculateMoves('4','0')">33</div>  
+        <div class="white" id="41" onclick="calculateMoves('4','1')">34</div>
+        <div class="white" id="42" onclick="calculateMoves('4','2')">35</div>
+        <div class="white" id="43" onclick="calculateMoves('4','3')">36</div> 
+        <div class="white" id="44" onclick="calculateMoves('4','4')">37</div>
+        <div class="white" id="45" onclick="calculateMoves('4','5')">38</div>
+        <div class="white" id="46" onclick="calculateMoves('4','6')">39</div>  
+        <div class="white" id="47" onclick="calculateMoves('4','7')">40</div>
+        <div class="white" id="50" onclick="calculateMoves('5','0')">41</div>
+        <div class="white" id="51" onclick="calculateMoves('5','1')">42</div>  
+        <div class="white" id="52" onclick="calculateMoves('5','2')">43</div>
+        <div class="white" id="53" onclick="calculateMoves('5','3')">44</div>
+        <div class="white" id="54" onclick="calculateMoves('5','4')">45</div> 
+        <div class="white" id="55" onclick="calculateMoves('5','5')">46</div>
+        <div class="white" id="56" onclick="calculateMoves('5','6')">47</div>
+        <div class="white" id="57" onclick="calculateMoves('5','7')">48</div>  
+        <div class="white" id="60" onclick="calculateMoves('6','0')">49</div>
+        <div class="white" id="61" onclick="calculateMoves('6','1')">50</div>
+        <div class="white" id="62" onclick="calculateMoves('6','2')">51</div>  
+        <div class="white" id="63" onclick="calculateMoves('6','3')">52</div>
+        <div class="white" id="64" onclick="calculateMoves('6','4')">53</div>
+        <div class="white" id="65" onclick="calculateMoves('6','5')">54</div> 
+        <div class="white" id="66" onclick="calculateMoves('6','6')">55</div>
+        <div class="white" id="67" onclick="calculateMoves('6','7')">56</div>
+        <div class="white" id="70" onclick="calculateMoves('7','0')">57</div>  
+        <div class="white" id="71" onclick="calculateMoves('7','1')">58</div>
+        <div class="white" id="72" onclick="calculateMoves('7','2')">59</div>
+        <div class="white" id="73" onclick="calculateMoves('7','3')">60</div>  
+        <div class="white" id="74" onclick="calculateMoves('7','4')">61</div>
+        <div class="white" id="75" onclick="calculateMoves('7','5')">62</div>
+        <div class="white" id="76" onclick="calculateMoves('7','6')">63</div> 
+        <div class="white" id="77" onclick="calculateMoves('7','7')">64</div> 
+      </div>
+
+      <script type="application/javascript">
+
+    function calculateMoves(p,q) {
+  
+        // All possible moves of a knight
+        let X = [ 2, 1, -1, -2, -2, -1, 1, 2 ];
+        let Y = [ 1, 2, 2, 1, -1, -2, -2, -1 ];
+   
+        let count = 0;
+
+        let res = [];
+   
+        // To check each possible move is valid or not
+        for (let i = 0; i < 8; i++) {
+   
+            // Position of knight after move
+            let x = parseInt(p) + X[i];
+            let y = parseInt(q) + Y[i];
+   
+            // count valid moves
+            if (x >= 0 && y >= 0 && x < 8 && y < 8 ){
+                count++;
+                res.push([x,y]);
+            }
+        }
+      
+        // changing the all boxes color to default before click on other box.
+        for (let i = 0; i < 8; i++) {
+            for (let j = 0; j < 8; j++) {
+                document.getElementById(""+i+j).style.backgroundColor = "white";
+            }
+        }
+
+        // changing the color of clicked box.
+        document.getElementById(""+p+q).style.backgroundColor = "Blue";
+
+        // changing the color of resulted boxes.
+        while(count>0){
+            count--;            
+            document.getElementById(""+res[count][0]+res[count][1]).style.backgroundColor = "green";
+        }
+    }
+    </script>
+    </body>
+</html>
