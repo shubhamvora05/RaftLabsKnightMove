@@ -4,9 +4,9 @@
   "description": "",
   "main": "knight_move_finder.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node dist/app.js",
     "postinstall": "tsc",
-    "watch-node": "nodemon dist/index.js",
+    "watch-node": "nodemon dist/app.js",
     "watch-ts": "tsc -w"
   },
   "author": "",
