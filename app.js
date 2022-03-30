@@ -1,4 +1,6 @@
 "use strict";
+require('dotenv').config();
+
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -11,9 +13,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT;
 app.get('/', (req, res) => {
-    res.send("hello");
+    res.sendFile(__dirname+'/dist/home.html');
 });
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);
