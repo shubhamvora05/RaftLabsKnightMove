@@ -13,7 +13,7 @@ const app = (0, express_1.default)();
 
 var port = process.env.PORT || 3000;
 app.get('/', (req, res) => {
-    res.sendFile(__dirname+"/home.html");
+    res.send("hello");
 });
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);
